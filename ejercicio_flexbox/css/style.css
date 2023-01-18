@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Utilizamos un flex en el cabecero de la página para siempre poder añadir más características al menú de navegación*/
+header#cabecero{
+    position: fixed;
+    width: 100%;
+    display: flex; /*caja flexible*/
+    font-size: x-large;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    height: 12vh;
+}
+
+header#cabecero p{
+    flex-grow: 2; /*Valor que toman los títulos cuando sobra espacio*/
+    /*flex-shrink: 1; --Valor que toman los títulos cuando falta espacio*/
+}
+
+header#cabecero p:hover{
+    background-color: rgba(75, 75, 75, 0.467);
+    border-radius: 5px;
+    transition: 1s;
+}
+
+header#cabecero img:first-child{
+    flex-grow: 1; /*Valor por defecto de la imagen inicial en el flexbox*/
+     /*flex-shrink: 2; --Valor que toma la imagen cuando falta espacio*/
+}
+
+header#cabecero img#logo{
+    width: 4%;
+}
+
+div#menuVertical{
+    position: fixed;
+    margin-top: 12vh;
+    width: 15%;
+    height: 700px;
+    float: left;
+    background-color: rgba(20, 20, 20, 0.574);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div#menuVertical h2{
+    flex-grow: 0;
+}
+
+div#menuVertical p{
+    /* flex-shrink: 1; */
+    height: 6%;
+    width: 100%;
+    text-align: center;
+}
+
+div#menuVertical p:hover{
+    flex-grow: 1;
+    transition: 1s;
+    text-decoration: underline;
+    padding-top: 12%;
+    background-color: rgba(75, 75, 75, 0.467);
+}
+
+div#catalogo{
+    margin-top: 15vh;
+    width: 85%;
+    float: right;
+}
+
+h2.tituloCategorias{
+    width: 80%;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+hr{
+    margin: 2%;
+    border-color: rgb(20, 20, 20);
+}
+
+div.contenidos{
+    width: 80%;
+    margin: auto;
+    background-color: rgb(37, 37, 37);
+    display: flex; /*caja flexible*/
+    border: solid 5px rgb(20, 20, 20);
+}
+
+div#contenido1 div{
+    width: 100px;
+    margin: 1%;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+div#contenido2{
+    justify-content: space-between;
+}
+
+div.contenidos div{
+    width: 100px;
+    margin: 1%;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+div#contenido2 div:first-child{
+    flex-grow: 2;
+}
+
+div#contenido2 div:nth-child(4){
+    flex-grow: 3;
+}
+
+div#contenido4{
+   flex-wrap: wrap;
+}
+
+div#contenido5{
+    flex-wrap: wrap-reverse;
+}
