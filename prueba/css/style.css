@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div#catalogo{
+    width: 100%;
+}
+
+h2.tituloCategorias{
+    width: 80%;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+hr{
+    margin: 2%;
+    border-color: rgb(20, 20, 20);
+}
+
+div.contenidos{
+    width: 80%;
+    margin: auto;
+    background-color: rgb(37, 37, 37);
+    display: flex; /*caja flexible*/
+    border: solid 5px rgb(20, 20, 20);
+}
+
+div#contenido1 div{
+    width: 100px;
+    margin: 1%;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+div#contenido2{
+    justify-content: space-between;
+}
+
+div.contenidos div{
+    width: 100px;
+    margin: 1%;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+div#contenido2 div:first-child{
+    flex-grow: 2;
+}
+
+div#contenido2 div:nth-child(4){
+    flex-grow: 3;
+}
+
+div#contenido4{
+   flex-wrap: wrap;
+}
+
+div#contenido5{
+    flex-wrap: wrap-reverse;
+}
